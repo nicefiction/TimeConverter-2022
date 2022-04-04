@@ -1,21 +1,32 @@
-//
-//  ContentView.swift
-//  TimeConverter
-//
-//  Created by Olivier Van hamme on 04/04/2022.
-//
+/// Source:
+/// https://www.hackingwithswift.com/100/swiftui/19
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+    // MARK: - Computed properties
+    
     var body: some View {
+        
         Text("Hello, world!")
             .padding()
     }
 }
 
+
+
+
+
+
+// MARK: - Previews
+
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         ContentView()
     }
 }
