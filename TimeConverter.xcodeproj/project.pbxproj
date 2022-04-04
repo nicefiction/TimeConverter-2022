@@ -11,6 +11,7 @@
 		C5B115ED27FB35140072570F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B115EC27FB35140072570F /* ContentView.swift */; };
 		C5B115EF27FB35160072570F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B115EE27FB35160072570F /* Assets.xcassets */; };
 		C5B115F227FB35160072570F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B115F127FB35160072570F /* Preview Assets.xcassets */; };
+		C5B115F927FB67C80072570F /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B115F827FB67C80072570F /* TimeUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C5B115EC27FB35140072570F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5B115EE27FB35160072570F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B115F127FB35160072570F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C5B115F827FB67C80072570F /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				C5B115EC27FB35140072570F /* ContentView.swift */,
 				C5B115EE27FB35160072570F /* Assets.xcassets */,
 				C5B115F027FB35160072570F /* Preview Content */,
+				C5B115F827FB67C80072570F /* TimeUnit.swift */,
 			);
 			path = TimeConverter;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B115F927FB67C80072570F /* TimeUnit.swift in Sources */,
 				C5B115ED27FB35140072570F /* ContentView.swift in Sources */,
 				C5B115EB27FB35140072570F /* TimeConverterApp.swift in Sources */,
 			);
