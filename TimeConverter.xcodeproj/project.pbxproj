@@ -21,6 +21,7 @@
 		C5B115EE27FB35160072570F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B115F127FB35160072570F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5B115F827FB67C80072570F /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
+		C5B115FA27FB723E0072570F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 		C5B115DE27FB35140072570F = {
 			isa = PBXGroup;
 			children = (
+				C5B115FA27FB723E0072570F /* MyPlayground.playground */,
 				C5B115E927FB35140072570F /* TimeConverter */,
 				C5B115E827FB35140072570F /* Products */,
 			);
