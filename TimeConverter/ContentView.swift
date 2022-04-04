@@ -8,8 +8,8 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: - Property wrappers
-    @State private var startTimeUnit: String = "minutes"
-    @State private var convertedTimeUnit: String = "seconds"
+    @State private var startTimeUnit: TimeUnit = .minute
+    @State private var convertedTimeUnit: TimeUnit = .second
     @State private var startValue: Double = 1
     
     @FocusState private var inputFieldIsActive: Bool
@@ -17,8 +17,8 @@ struct ContentView: View {
     
     
     // MARK: - Properties
-    let timeUnits: Array<String> = [
-        "seconds", "minutes", "hours", "days"
+    let timeUnits: Array<TimeUnit> = [
+        .second, .minute, .hour, .day
     ]
     
 //    let formatter: NumberFormatter = {
@@ -34,25 +34,25 @@ struct ContentView: View {
     var convertedTime: Double {
         
         switch (startTimeUnit, convertedTimeUnit) {
-        case ("seconds", "seconds"): return startValue
-        case ("seconds", "minutes"): return startValue / 60
-        case ("seconds", "hours"): return startValue / (60 * 60)
-        case ("seconds", "days"): return startValue / (60 * 60 * 24)
+        case (.second, .second): return startValue
+        case (.second, .minute): return startValue / 60
+        case (.second, .hour): return startValue / (60 * 60)
+        case (.second, .day): return startValue / (60 * 60 * 24)
             
-        case ("minutes", "seconds"): return startValue * 60
-        case ("minutes", "minutes"): return startValue
-        case ("minutes", "hours"): return startValue / 60
-        case ("minutes", "days"): return startValue / (60 * 24)
+        case (.minute, .second): return startValue * 60
+        case (.minute, .minute): return startValue
+        case (.minute, .hour): return startValue / 60
+        case (.minute, .day): return startValue / (60 * 24)
             
-        case ("hours", "seconds"): return startValue * (60 * 60)
-        case ("hours", "minutes"): return startValue * 60
-        case ("hours", "hours"): return startValue
-        case ("hours", "days"): return startValue / 24
+        case (.hour, .second): return startValue * (60 * 60)
+        case (.hour, .minute): return startValue * 60
+        case (.hour, .hour): return startValue
+        case (.hour, .day): return startValue / 24
             
-        case ("days", "seconds"): return startValue / (24 * 60 * 60)
-        case ("days", "minutes"): return startValue / (24 * 60)
-        case ("days", "hours"): return startValue / 24
-        default: return startValue
+        case (.day, .second): return startValue * (24 * 60 * 60)
+        case (.day, .minute): return startValue * (24 * 60)
+        case (.day, .hour): return startValue * 24
+        case (.day, .day): return startValue
         }
     }
     
@@ -73,7 +73,7 @@ struct ContentView: View {
                        selection: $startTimeUnit) {
                     ForEach(timeUnits,
                             id: \.self) {
-                        Text("\($0)")
+                        Text($0.rawValue)
                     }
                 }
                    .pickerStyle(.segmented)
@@ -84,7 +84,7 @@ struct ContentView: View {
                        selection: $convertedTimeUnit) {
                     ForEach(timeUnits,
                             id: \.self) {
-                        Text("\($0)")
+                        Text($0.rawValue)
                     }
                 }
                 .pickerStyle(.segmented)

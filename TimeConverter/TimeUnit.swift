@@ -2,7 +2,8 @@
 import Foundation
 
 
-enum TimeUnit {
+enum TimeUnit: String,
+               CaseIterable{
     
     case second, minute, hour, day
 }
